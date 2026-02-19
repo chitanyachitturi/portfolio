@@ -28,15 +28,15 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-32 bg-white">
+    <section id="contact" className="py-32 bg-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Get In Touch
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-cyan-600 mx-auto mb-6"></div>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <div className="w-20 h-1 bg-white/50 mx-auto mb-6"></div>
+          <p className="text-lg text-white/80 max-w-3xl mx-auto">
             I'm always open to discussing new opportunities, collaborations, or just having a chat about cloud engineering
           </p>
         </div>

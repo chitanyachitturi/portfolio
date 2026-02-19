@@ -11,68 +11,65 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-32">
+    <section id="about" className="py-32 bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             About Me
           </h2>
-          <div className="w-20 h-1 bg-white/50 mx-auto"></div>
+          <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Photo */}
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
-              <div className="w-80 h-80 rounded-3xl overflow-hidden shadow-2xl border-4 border-white/30 backdrop-blur-sm">
+              <div className="w-80 h-80 rounded-3xl overflow-hidden shadow-2xl">
                 <img
                   src={personalInfo.photo}
                   alt={personalInfo.name}
                   className="w-full h-full object-cover"
                 />
               </div>
-              {/* Decorative elements */}
-              <div className="absolute -bottom-6 -right-6 w-40 h-40 bg-white/10 rounded-3xl -z-10 blur-2xl"></div>
-              <div className="absolute -top-6 -left-6 w-40 h-40 bg-white/10 rounded-3xl -z-10 blur-2xl"></div>
             </div>
           </div>
 
           {/* Bio and Contact Info */}
           <div>
-            <h3 className="text-3xl font-bold text-white mb-4">
+            <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
               Cloud Engineer & DevOps Specialist
             </h3>
-            <p className="text-lg text-white/90 leading-relaxed mb-8">
+            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
               {personalInfo.bio}
             </p>
 
             {/* Contact Details */}
             <div className="space-y-4 mb-10">
-              <div className="flex items-center gap-3 text-white/90">
-                <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                  <MapPin size={20} className="text-white" />
+              <div className="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center">
+                  <MapPin size={20} className="text-blue-600 dark:text-blue-400" />
                 </div>
                 <span className="font-medium">{personalInfo.location}</span>
               </div>
-              <div className="flex items-center gap-3 text-white/90">
-                <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                  <Mail size={20} className="text-white" />
+              <div className="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center">
+                  <Mail size={20} className="text-blue-600 dark:text-blue-400" />
                 </div>
                 <a
                   href={`mailto:${personalInfo.email}`}
-                  className="font-medium hover:text-white transition-colors"
+                  className="font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                 >
                   {personalInfo.email}
                 </a>
               </div>
-              <div className="flex items-center gap-3 text-white/90">
-                <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                  <Phone size={20} className="text-white" />
+              <div className="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center">
+                  <Phone size={20} className="text-blue-600 dark:text-blue-400" />
                 </div>
                 <a
                   href={`tel:${personalInfo.phone}`}
-                  className="font-medium hover:text-white transition-colors"
+                  className="font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                 >
                   {personalInfo.phone}
                 </a>
@@ -84,10 +81,10 @@ const About = () => {
               {stats.map((stat, index) => {
                 const Icon = stat.icon;
                 return (
-                  <Card key={index} className="p-5 text-center bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all duration-300">
-                    <Icon size={28} className="mx-auto mb-3 text-white" />
-                    <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
-                    <div className="text-xs text-white/80 font-medium">{stat.label}</div>
+                  <Card key={index} className="p-5 text-center bg-white dark:bg-gray-800 border-blue-200 dark:border-gray-700 hover:bg-blue-50 dark:hover:bg-gray-700 transition-all duration-300">
+                    <Icon size={28} className="mx-auto mb-3 text-blue-600 dark:text-blue-400" />
+                    <div className="text-3xl font-bold text-gray-900 dark:text-white mb-1">{stat.value}</div>
+                    <div className="text-xs text-gray-600 dark:text-gray-400 font-medium">{stat.label}</div>
                   </Card>
                 );
               })}

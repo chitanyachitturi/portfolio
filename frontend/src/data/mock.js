@@ -24,7 +24,7 @@ export const experience = [
     period: "April 2024 - Present",
     dates: "Apr 2024 - Present",
     location: "Blacksburg, VA",
-    logo: null,
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Virginia_Tech_Hokies_logo.svg/1280px-Virginia_Tech_Hokies_logo.svg.png",
     description: "Leading cloud infrastructure optimization and automation initiatives, reducing costs by 25% while enhancing security and scalability.",
     highlights: [
       "Optimized AWS infrastructure through resource right-sizing and autoscaling for reliable analytics delivery",
@@ -42,7 +42,7 @@ export const experience = [
     period: "August 2023 - April 2024",
     dates: "Aug 2023 - Apr 2024",
     location: "USA",
-    logo: null,
+    logo: "https://wynbit.com/wp-content/uploads/2023/03/wynbit-logo.svg",
     description: "Managed AWS cloud resources for mission-critical healthcare applications, implementing CI/CD pipelines and container orchestration.",
     highlights: [
       "Provisioned and managed AWS cloud resources for mission-critical healthcare applications",
@@ -130,7 +130,7 @@ export const skillsWithLogos = [
   { name: "Docker", logo: "https://www.vectorlogo.zone/logos/docker/docker-icon.svg" },
   { name: "Kubernetes", logo: "https://www.vectorlogo.zone/logos/kubernetes/kubernetes-icon.svg" },
   { name: "Jenkins", logo: "https://www.vectorlogo.zone/logos/jenkins/jenkins-icon.svg" },
-  { name: "GitLab", logo: "https://about.gitlab.com/images/press/logo/svg/gitlab-logo-gray-rgb.svg" },
+  { name: "GitLab", logo: "https://www.vectorlogo.zone/logos/gitlab/gitlab-icon.svg" },
   { name: "GitHub Actions", logo: "https://www.vectorlogo.zone/logos/github/github-icon.svg" },
   { name: "Ansible", logo: "https://www.vectorlogo.zone/logos/ansible/ansible-icon.svg" },
   { name: "MySQL", logo: "https://www.vectorlogo.zone/logos/mysql/mysql-icon.svg" },

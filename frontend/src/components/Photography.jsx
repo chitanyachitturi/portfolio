@@ -7,7 +7,7 @@ const Photography = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
   return (
-    <section id="photography" className="py-32 bg-white">
+    <section id="photography" className="py-32 bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-20">
@@ -16,11 +16,11 @@ const Photography = () => {
               <Camera size={24} className="text-white" />
             </div>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Photography & Travel
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+            My Non-Cloud Storage
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-cyan-600 mx-auto mb-6"></div>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Capturing moments from my travels and exploring the world through the lens
           </p>
         </div>
@@ -30,7 +30,7 @@ const Photography = () => {
           {photographyGallery.map((photo) => (
             <div
               key={photo.id}
-              className="group relative overflow-hidden rounded-2xl border-2 border-gray-100 hover:border-blue-500 transition-all duration-300 cursor-pointer aspect-[4/3] hover:shadow-xl"
+              className="group relative overflow-hidden rounded-2xl border-2 border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300 cursor-pointer aspect-[4/3] hover:shadow-xl"
               onClick={() => setSelectedImage(photo)}
             >
               {/* Image */}

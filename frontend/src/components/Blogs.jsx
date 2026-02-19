@@ -8,7 +8,7 @@ import { BookOpen } from 'lucide-react';
 
 const Blogs = () => {
   return (
-    <section id="blogs" className="py-32 bg-gradient-to-br from-blue-50 via-white to-cyan-50">
+    <section id="blogs" className="py-32 bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-20">
@@ -17,11 +17,11 @@ const Blogs = () => {
               <BookOpen size={24} className="text-white" />
             </div>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             Recent Blogs
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-cyan-600 mx-auto mb-6"></div>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Insights, tutorials, and thoughts on cloud engineering and DevOps practices
           </p>
         </div>
@@ -31,10 +31,10 @@ const Blogs = () => {
           {blogs.map((blog) => (
             <Card
               key={blog.id}
-              className="group p-6 bg-white border-2 border-gray-100 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col hover:-translate-y-2"
+              className="group p-6 bg-white dark:bg-gray-800 border-2 border-gray-100 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 hover:shadow-xl transition-all duration-300 flex flex-col hover:-translate-y-2"
             >
               {/* Date and Read Time */}
-              <div className="flex items-center gap-4 mb-4 text-sm text-gray-500">
+              <div className="flex items-center gap-4 mb-4 text-sm text-gray-500 dark:text-gray-400">
                 <div className="flex items-center gap-1">
                   <Calendar size={14} />
                   <span>{new Date(blog.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
@@ -46,12 +46,12 @@ const Blogs = () => {
               </div>
 
               {/* Title */}
-              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors leading-tight">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors leading-tight">
                 {blog.title}
               </h3>
 
               {/* Excerpt */}
-              <p className="text-gray-600 mb-4 flex-grow leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-300 mb-4 flex-grow leading-relaxed">
                 {blog.excerpt}
               </p>
 
@@ -60,7 +60,7 @@ const Blogs = () => {
                 {blog.tags.map((tag, index) => (
                   <Badge
                     key={index}
-                    className="bg-blue-100 text-blue-700 hover:bg-blue-200 border-0 text-xs font-semibold"
+                    className="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 hover:bg-blue-200 dark:hover:bg-blue-800 border-0 text-xs font-semibold"
                   >
                     {tag}
                   </Badge>
@@ -72,7 +72,7 @@ const Blogs = () => {
                 href={blog.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-blue-600 hover:text-blue-700 transition-colors font-medium text-sm"
+                className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors font-medium text-sm"
               >
                 Read More
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />

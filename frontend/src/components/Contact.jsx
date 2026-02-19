@@ -68,41 +68,41 @@ const Contact = () => {
 
           {/* Contact Info */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="flex items-center gap-3 text-gray-700 justify-center">
-              <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
-                <MapPin size={20} className="text-blue-600" />
+            <div className="flex items-center gap-3 text-white justify-center">
+              <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30">
+                <MapPin size={20} className="text-white" />
               </div>
               <span className="font-medium">{personalInfo.location}</span>
             </div>
-            <div className="flex items-center gap-3 text-gray-700 justify-center">
-              <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
-                <Phone size={20} className="text-blue-600" />
+            <div className="flex items-center gap-3 text-white justify-center">
+              <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30">
+                <Phone size={20} className="text-white" />
               </div>
               <span className="font-medium">{personalInfo.phone}</span>
             </div>
-            <div className="flex items-center gap-3 text-gray-700 justify-center">
-              <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
-                <Mail size={20} className="text-blue-600" />
+            <div className="flex items-center gap-3 text-white justify-center">
+              <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30">
+                <Mail size={20} className="text-white" />
               </div>
               <span className="font-medium text-sm">{personalInfo.email}</span>
             </div>
           </div>
 
           {/* CTA Card */}
-          <Card className="p-8 md:p-12 bg-gradient-to-br from-blue-50 to-cyan-50 border-2 border-blue-200">
+          <Card className="p-8 md:p-12 bg-white/10 backdrop-blur-sm border-2 border-white/20">
             <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-full mb-6 shadow-lg">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full mb-6 border border-white/30">
                 <Send size={28} className="text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              <h3 className="text-2xl font-bold text-white mb-4">
                 Let's Build Something Great Together
               </h3>
-              <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+              <p className="text-white/80 mb-8 max-w-2xl mx-auto">
                 Whether you're looking to optimize your cloud infrastructure, implement DevOps best practices, or need consultation on AWS solutions, I'd love to hear from you.
               </p>
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-6 text-lg rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-6 text-lg rounded-full transition-all duration-300 shadow-lg hover:shadow-xl font-semibold"
                 onClick={() => window.location.href = `mailto:${personalInfo.email}`}
               >
                 <Mail size={20} className="mr-2" />

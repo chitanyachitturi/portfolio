@@ -19,7 +19,7 @@ function App() {
   }, []);
 
   return (
-    <div className="App bg-black">
+    <div className="App">
       <Header />
       <main>
         <Hero />

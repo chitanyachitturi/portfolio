@@ -12,15 +12,15 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="py-32 bg-gradient-to-br from-blue-50 via-white to-cyan-50">
+    <section id="projects" className="py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Featured Projects
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-cyan-600 mx-auto mb-6"></div>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <div className="w-20 h-1 bg-white/50 mx-auto mb-6"></div>
+          <p className="text-lg text-white/90 max-w-3xl mx-auto">
             Key initiatives showcasing cloud engineering expertise and innovative solutions
           </p>
         </div>
@@ -32,27 +32,27 @@ const Projects = () => {
             return (
               <Card
                 key={project.id}
-                className="group p-8 bg-white border-2 border-gray-100 hover:border-blue-500 hover:shadow-2xl transition-all duration-300 flex flex-col hover:-translate-y-2"
+                className="group p-8 bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all duration-300 flex flex-col hover:-translate-y-2"
               >
                 {/* Icon */}
                 <div className="mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg">
+                  <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg border border-white/30">
                     <IconComponent size={32} className="text-white" />
                   </div>
                 </div>
 
                 {/* Category Badge */}
-                <Badge className="mb-4 w-fit bg-blue-100 text-blue-700 hover:bg-blue-200 border-0 font-semibold">
+                <Badge className="mb-4 w-fit bg-white/20 text-white hover:bg-white/30 border-white/30 font-semibold">
                   {project.category}
                 </Badge>
 
                 {/* Title */}
-                <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
+                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-white/90 transition-colors">
                   {project.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-gray-600 mb-6 flex-grow leading-relaxed">
+                <p className="text-white/80 mb-6 flex-grow leading-relaxed">
                   {project.description}
                 </p>
 
@@ -61,7 +61,7 @@ const Projects = () => {
                   {project.technologies.slice(0, 4).map((tech, index) => (
                     <span
                       key={index}
-                      className="text-xs px-3 py-1 bg-gray-100 text-gray-700 rounded-full border border-gray-200 font-medium"
+                      className="text-xs px-3 py-1 bg-white/10 text-white/90 rounded-full border border-white/20 font-medium"
                     >
                       {tech}
                     </span>
@@ -69,9 +69,9 @@ const Projects = () => {
                 </div>
 
                 {/* Impact */}
-                <div className="pt-6 border-t border-gray-200">
-                  <p className="text-sm text-gray-600">
-                    <span className="font-bold text-blue-600">Impact:</span> {project.impact}
+                <div className="pt-6 border-t border-white/20">
+                  <p className="text-sm text-white/80">
+                    <span className="font-bold text-white">Impact:</span> {project.impact}
                   </p>
                 </div>
               </Card>

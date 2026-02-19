@@ -54,12 +54,12 @@ const Contact = () => {
                   rel={method.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                   className="block"
                 >
-                  <Card className="p-6 text-center bg-white border-2 border-gray-100 hover:border-blue-500 hover:shadow-lg transition-all duration-300 group h-full">
-                    <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-md">
+                  <Card className="p-6 text-center bg-white/10 backdrop-blur-sm border-2 border-white/20 hover:border-white/50 hover:bg-white/20 transition-all duration-300 group h-full">
+                    <div className="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform border border-white/30">
                       <IconComponent size={24} className="text-white" />
                     </div>
-                    <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">{method.label}</h3>
-                    <p className="text-sm text-gray-600 break-words">{method.value}</p>
+                    <h3 className="font-semibold text-white mb-2 group-hover:text-blue-200 transition-colors">{method.label}</h3>
+                    <p className="text-sm text-white/70 break-words">{method.value}</p>
                   </Card>
                 </a>
               );

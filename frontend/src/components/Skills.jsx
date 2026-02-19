@@ -1,104 +1,81 @@
-import React from 'react';
-import { Cloud, Code, Database, Wrench, Server } from 'lucide-react';
+import React, { useState } from 'react';
 import { Card } from './ui/card';
-import { skills } from '../data/mock';
-import * as LucideIcons from 'lucide-react';
+import { Button } from './ui/button';
+import { skillsWithLogos } from '../data/mock';
+import { ChevronDown, ChevronUp } from 'lucide-react';
 
 const Skills = () => {
-  const skillCategories = [
-    {
-      title: 'Cloud Platforms',
-      icon: Cloud,
-      skills: skills.cloud,
-      gradient: 'from-orange-500/20 to-red-500/20'
-    },
-    {
-      title: 'DevOps & IaC',
-      icon: Server,
-      skills: skills.devops,
-      gradient: 'from-orange-500/20 to-yellow-500/20'
-    },
-    {
-      title: 'Programming',
-      icon: Code,
-      skills: skills.programming,
-      gradient: 'from-orange-500/20 to-orange-600/20'
-    },
-    {
-      title: 'Databases',
-      icon: Database,
-      skills: skills.databases,
-      gradient: 'from-red-500/20 to-orange-500/20'
-    },
-    {
-      title: 'Tools & Platforms',
-      icon: Wrench,
-      skills: skills.tools,
-      gradient: 'from-yellow-500/20 to-orange-500/20'
-    }
-  ];
-
-  const getIconComponent = (iconName) => {
-    const IconComponent = LucideIcons[iconName.charAt(0).toUpperCase() + iconName.slice(1).replace(/-([a-z])/g, (g) => g[1].toUpperCase())];
-    return IconComponent || LucideIcons.Box;
-  };
+  const [showAll, setShowAll] = useState(false);
+  const displayedSkills = showAll ? skillsWithLogos : skillsWithLogos.slice(0, 12);
 
   return (
-    <section id="skills" className="py-20 md:py-32 bg-gradient-to-b from-gray-900 to-black relative">
-      {/* Decorative Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-orange-500/5 rounded-full blur-3xl"></div>
-      </div>
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="skills" className="py-32 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Technical Skills
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-orange-500 to-orange-600 mx-auto mb-6"></div>
-          <p className="text-lg text-gray-400 max-w-3xl mx-auto">
-            Comprehensive expertise across cloud platforms, DevOps tools, and modern technologies
+          <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-cyan-600 mx-auto mb-6"></div>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            A curated selection of my expertise in Cloud Computing and DevOps
           </p>
         </div>
 
-        {/* Skills Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {skillCategories.map((category, index) => {
-            const IconComponent = category.icon;
-            return (
-              <Card
-                key={index}
-                className="p-6 bg-gradient-to-br from-gray-900 to-black border-orange-500/20 hover:border-orange-500/50 hover:shadow-lg hover:shadow-orange-500/20 transition-all duration-300"
-              >
-                {/* Category Header */}
-                <div className="flex items-center gap-3 mb-4 pb-4 border-b border-gray-800">
-                  <div className={`w-12 h-12 bg-gradient-to-br ${category.gradient} rounded-lg flex items-center justify-center border border-orange-500/20`}>
-                    <IconComponent size={24} className="text-orange-500" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-white">{category.title}</h3>
+        {/* Skills Grid - Like Hasan's Portfolio */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 mb-8">
+          {displayedSkills.map((skill, index) => (
+            <Card
+              key={index}
+              className="group p-6 flex flex-col items-center justify-center gap-4 bg-white border-2 border-gray-100 hover:border-blue-500 hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer"
+            >
+              <div className="w-16 h-16 flex items-center justify-center">
+                <img
+                  src={skill.logo}
+                  alt={skill.name}
+                  className="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.nextSibling.style.display = 'flex';
+                  }}
+                />
+                <div className="hidden w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg items-center justify-center text-white font-bold text-xl">
+                  {skill.name.charAt(0)}
                 </div>
-
-                {/* Skills List */}
-                <div className="space-y-3">
-                  {category.skills.map((skill, skillIndex) => {
-                    const SkillIcon = typeof skill === 'object' ? getIconComponent(skill.icon) : null;
-                    const skillName = typeof skill === 'object' ? skill.name : skill;
-                    return (
-                      <div
-                        key={skillIndex}
-                        className="flex items-center gap-3 px-3 py-2 bg-white/5 rounded-lg border border-gray-800 hover:border-orange-500/30 hover:bg-orange-500/5 transition-all duration-200"
-                      >
-                        {SkillIcon && <SkillIcon size={16} className="text-orange-500" />}
-                        <span className="text-sm text-gray-300">{skillName}</span>
-                      </div>
-                    );
-                  })}
-                </div>
-              </Card>
-            );
-          })}
+              </div>
+              <span className="text-sm font-medium text-gray-700 group-hover:text-blue-600 transition-colors text-center">
+                {skill.name}
+              </span>
+            </Card>
+          ))}
         </div>
+
+        {/* Show More/Less Button */}
+        {skillsWithLogos.length > 12 && (
+          <div className="text-center">
+            <Button
+              onClick={() => setShowAll(!showAll)}
+              className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all"
+            >
+              {showAll ? (
+                <>
+                  <ChevronUp size={20} className="mr-2" />
+                  Show Less
+                </>
+              ) : (
+                <>
+                  <ChevronDown size={20} className="mr-2" />
+                  Show All ({skillsWithLogos.length})
+                </>
+              )}
+            </Button>
+          </div>
+        )}
+
+        {/* Additional Info */}
+        <p className="text-center text-gray-500 mt-8 italic">
+          ...and plenty more technologies I'm exploring & mastering every day.
+        </p>
       </div>
     </section>
   );

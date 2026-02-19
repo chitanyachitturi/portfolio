@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Camera, X } from 'lucide-react';
 import { Dialog, DialogContent } from './ui/dialog';
 import { photographyGallery } from '../data/mock';
+import ScrollReveal from './ScrollReveal';
 
 const Photography = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -10,43 +11,46 @@ const Photography = () => {
     <section id="photography" className="py-32 bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-20">
-          <div className="inline-flex items-center justify-center gap-2 mb-4">
-            <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center">
-              <Camera size={24} className="text-white" />
+        <ScrollReveal>
+          <div className="text-center mb-20">
+            <div className="inline-flex items-center justify-center gap-2 mb-4">
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center">
+                <Camera size={24} className="text-white" />
+              </div>
             </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+              My Non-Cloud Storage
+            </h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-cyan-600 mx-auto mb-6"></div>
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              Capturing moments from my travels and exploring the world through the lens
+            </p>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            My Non-Cloud Storage
-          </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-cyan-600 mx-auto mb-6"></div>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Capturing moments from my travels and exploring the world through the lens
-          </p>
-        </div>
+        </ScrollReveal>
 
         {/* Gallery Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {photographyGallery.map((photo) => (
-            <div
-              key={photo.id}
-              className="group relative overflow-hidden rounded-2xl border-2 border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300 cursor-pointer aspect-[4/3] hover:shadow-xl"
-              onClick={() => setSelectedImage(photo)}
-            >
-              {/* Image */}
-              <img
-                src={photo.image}
-                alt={photo.title}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-              />
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h3 className="text-white font-semibold text-lg mb-1">{photo.title}</h3>
-                  <p className="text-blue-300 text-sm">{photo.location}</p>
+          {photographyGallery.map((photo, index) => (
+            <ScrollReveal key={photo.id} delay={index * 100} direction="up">
+              <div
+                className="group relative overflow-hidden rounded-2xl border-2 border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300 cursor-pointer aspect-[4/3] hover:shadow-xl"
+                onClick={() => setSelectedImage(photo)}
+              >
+                {/* Image */}
+                <img
+                  src={photo.image}
+                  alt={photo.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute bottom-0 left-0 right-0 p-6">
+                    <h3 className="text-white font-semibold text-lg mb-1">{photo.title}</h3>
+                    <p className="text-blue-300 text-sm">{photo.location}</p>
+                  </div>
                 </div>
               </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
 

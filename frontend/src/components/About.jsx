@@ -11,71 +11,68 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 md:py-32 bg-black relative">
-      {/* Decorative Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-orange-500/5 rounded-full blur-3xl"></div>
-      </div>
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-32 bg-gradient-to-br from-cyan-50 via-white to-blue-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             About Me
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-orange-500 to-orange-600 mx-auto"></div>
+          <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-cyan-600 mx-auto"></div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Photo */}
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
-              <div className="w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden border-2 border-orange-500/30 shadow-2xl shadow-orange-500/20">
+              <div className="w-80 h-80 rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
                 <img
                   src={personalInfo.photo}
                   alt={personalInfo.name}
                   className="w-full h-full object-cover"
-                  style={{
-                    objectPosition: 'center 20%',
-                    filter: 'brightness(1.1) contrast(1.1)',
-                    mixBlendMode: 'screen'
-                  }}
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-orange-500/20 rounded-2xl -z-10 blur-xl"></div>
-              <div className="absolute -top-6 -left-6 w-32 h-32 bg-orange-600/20 rounded-2xl -z-10 blur-xl"></div>
+              {/* Decorative elements */}
+              <div className="absolute -bottom-6 -right-6 w-40 h-40 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-3xl -z-10 blur-2xl"></div>
+              <div className="absolute -top-6 -left-6 w-40 h-40 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-3xl -z-10 blur-2xl"></div>
             </div>
           </div>
 
           {/* Bio and Contact Info */}
           <div>
-            <h3 className="text-2xl md:text-3xl font-semibold text-white mb-4">
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">
               Cloud Engineer & DevOps Specialist
             </h3>
-            <p className="text-lg text-gray-400 leading-relaxed mb-6">
+            <p className="text-lg text-gray-600 leading-relaxed mb-8">
               {personalInfo.bio}
             </p>
 
             {/* Contact Details */}
-            <div className="space-y-3 mb-8">
-              <div className="flex items-center gap-3 text-gray-400">
-                <MapPin size={20} className="text-orange-500 flex-shrink-0" />
-                <span>{personalInfo.location}</span>
+            <div className="space-y-4 mb-10">
+              <div className="flex items-center gap-3 text-gray-700">
+                <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                  <MapPin size={20} className="text-blue-600" />
+                </div>
+                <span className="font-medium">{personalInfo.location}</span>
               </div>
-              <div className="flex items-center gap-3 text-gray-400">
-                <Mail size={20} className="text-orange-500 flex-shrink-0" />
+              <div className="flex items-center gap-3 text-gray-700">
+                <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                  <Mail size={20} className="text-blue-600" />
+                </div>
                 <a
                   href={`mailto:${personalInfo.email}`}
-                  className="hover:text-orange-500 transition-colors"
+                  className="font-medium hover:text-blue-600 transition-colors"
                 >
                   {personalInfo.email}
                 </a>
               </div>
-              <div className="flex items-center gap-3 text-gray-400">
-                <Phone size={20} className="text-orange-500 flex-shrink-0" />
+              <div className="flex items-center gap-3 text-gray-700">
+                <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                  <Phone size={20} className="text-blue-600" />
+                </div>
                 <a
                   href={`tel:${personalInfo.phone}`}
-                  className="hover:text-orange-500 transition-colors"
+                  className="font-medium hover:text-blue-600 transition-colors"
                 >
                   {personalInfo.phone}
                 </a>
@@ -87,10 +84,10 @@ const About = () => {
               {stats.map((stat, index) => {
                 const Icon = stat.icon;
                 return (
-                  <Card key={index} className="p-4 text-center bg-gradient-to-br from-gray-900 to-black border-orange-500/20 hover:border-orange-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/20">
-                    <Icon size={24} className="mx-auto mb-2 text-orange-500" />
-                    <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
-                    <div className="text-xs text-gray-400">{stat.label}</div>
+                  <Card key={index} className="p-5 text-center bg-white border-2 border-gray-100 hover:border-blue-500 hover:shadow-lg transition-all duration-300">
+                    <Icon size={28} className="mx-auto mb-3 text-blue-600" />
+                    <div className="text-3xl font-bold text-gray-900 mb-1">{stat.value}</div>
+                    <div className="text-xs text-gray-600 font-medium">{stat.label}</div>
                   </Card>
                 );
               })}

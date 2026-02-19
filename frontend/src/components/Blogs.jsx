@@ -8,20 +8,20 @@ import { BookOpen } from 'lucide-react';
 
 const Blogs = () => {
   return (
-    <section id="blogs" className="py-32 bg-gradient-to-br from-blue-50 via-white to-cyan-50">
+    <section id="blogs" className="py-32 bg-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-20">
           <div className="inline-flex items-center justify-center gap-2 mb-4">
-            <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center">
+            <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30">
               <BookOpen size={24} className="text-white" />
             </div>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Recent Blogs
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-cyan-600 mx-auto mb-6"></div>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <div className="w-20 h-1 bg-white/50 mx-auto mb-6"></div>
+          <p className="text-lg text-white/80 max-w-3xl mx-auto">
             Insights, tutorials, and thoughts on cloud engineering and DevOps practices
           </p>
         </div>
@@ -31,10 +31,10 @@ const Blogs = () => {
           {blogs.map((blog) => (
             <Card
               key={blog.id}
-              className="group p-6 bg-white border-2 border-gray-100 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col hover:-translate-y-2"
+              className="group p-6 bg-white/10 backdrop-blur-sm border-2 border-white/20 hover:border-white/50 hover:bg-white/20 transition-all duration-300 flex flex-col hover:-translate-y-2"
             >
               {/* Date and Read Time */}
-              <div className="flex items-center gap-4 mb-4 text-sm text-gray-500">
+              <div className="flex items-center gap-4 mb-4 text-sm text-white/60">
                 <div className="flex items-center gap-1">
                   <Calendar size={14} />
                   <span>{new Date(blog.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
@@ -46,12 +46,12 @@ const Blogs = () => {
               </div>
 
               {/* Title */}
-              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors leading-tight">
+              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-200 transition-colors leading-tight">
                 {blog.title}
               </h3>
 
               {/* Excerpt */}
-              <p className="text-gray-600 mb-4 flex-grow leading-relaxed">
+              <p className="text-white/70 mb-4 flex-grow leading-relaxed">
                 {blog.excerpt}
               </p>
 
@@ -60,7 +60,7 @@ const Blogs = () => {
                 {blog.tags.map((tag, index) => (
                   <Badge
                     key={index}
-                    className="bg-blue-100 text-blue-700 hover:bg-blue-200 border-0 text-xs font-semibold"
+                    className="bg-white/20 text-white hover:bg-white/30 border border-white/30 text-xs font-semibold"
                   >
                     {tag}
                   </Badge>
@@ -72,7 +72,7 @@ const Blogs = () => {
                 href={blog.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-blue-600 hover:text-blue-700 transition-colors font-medium text-sm"
+                className="flex items-center gap-2 text-blue-200 hover:text-white transition-colors font-medium text-sm"
               >
                 Read More
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
@@ -84,7 +84,7 @@ const Blogs = () => {
         {/* View All Button */}
         <div className="text-center">
           <Button
-            className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-6 text-lg rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
+            className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-6 text-lg rounded-full transition-all duration-300 shadow-lg hover:shadow-xl font-semibold"
             onClick={() => window.open(personalInfo.socialLinks.medium, '_blank')}
           >
             <BookOpen size={20} className="mr-2" />

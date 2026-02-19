@@ -1,11 +1,14 @@
 export const personalInfo = {
   name: "Sai Venkata Chaitanya Chitturi",
+  firstName: "Chaitanya",
+  lastName: "Chitturi",
   title: "Cloud Engineer",
   location: "Blacksburg, VA",
   email: "chaitanyachitturi99@gmail.com",
   phone: "(703)-862-0600",
   photo: "https://customer-assets.emergentagent.com/job_baa3294c-70d0-455b-b5b8-da272f44bf4d/artifacts/omrq2kw4_IMG_7447.jpg",
-  bio: "Passionate Cloud Engineer specializing in AWS infrastructure optimization, DevOps automation, and scalable cloud solutions. With a strong foundation in infrastructure as code and CI/CD pipelines, I help organizations build reliable, secure, and cost-effective cloud environments. Currently optimizing cloud infrastructure at Virginia Tech while continuously expanding my expertise in cutting-edge cloud technologies.",
+  bio: "Passionate Cloud Engineer specializing in AWS infrastructure optimization, DevOps automation, and scalable cloud solutions. With a strong foundation in infrastructure as code and CI/CD pipelines, I help organizations build reliable, secure, and cost-effective cloud environments.",
+  tagline: "Building scalable infrastructure and optimizing cloud operations",
   socialLinks: {
     linkedin: "https://www.linkedin.com/in/chaitanya-chitturi/",
     medium: "https://medium.com/@chaitanyachitturi99",
@@ -19,7 +22,9 @@ export const experience = [
     company: "Virginia Tech",
     role: "Cloud Engineer",
     period: "April 2024 - Present",
+    dates: "Apr 2024 - Present",
     location: "Blacksburg, VA",
+    logo: null,
     description: "Leading cloud infrastructure optimization and automation initiatives, reducing costs by 25% while enhancing security and scalability.",
     highlights: [
       "Optimized AWS infrastructure through resource right-sizing and autoscaling for reliable analytics delivery",
@@ -35,7 +40,9 @@ export const experience = [
     company: "Wynbit Inc.",
     role: "Cloud Engineer",
     period: "August 2023 - April 2024",
+    dates: "Aug 2023 - Apr 2024",
     location: "USA",
+    logo: null,
     description: "Managed AWS cloud resources for mission-critical healthcare applications, implementing CI/CD pipelines and container orchestration.",
     highlights: [
       "Provisioned and managed AWS cloud resources for mission-critical healthcare applications",
@@ -50,7 +57,9 @@ export const experience = [
     company: "Data Stratics",
     role: "Software Engineer",
     period: "May 2020 - August 2021",
+    dates: "May 2020 - Aug 2021",
     location: "India",
+    logo: null,
     description: "Built highly available, scalable cloud environments and managed cloud migration projects, improving database efficiency by 40%.",
     highlights: [
       "Built highly available, scalable cloud environments using EC2, S3, RDS, ELB, and CloudFormation",
@@ -75,7 +84,9 @@ export const projects = [
       "Automated deployment pipeline with Terraform and GitLab CI/CD",
       "Ensured reliable delivery of analytics insights to end-users"
     ],
-    impact: "Enabled data scientists and analysts to leverage advanced AI capabilities for actionable insights"
+    impact: "Enabled data scientists and analysts to leverage advanced AI capabilities for actionable insights",
+    github: null,
+    live: null
   },
   {
     id: 2,
@@ -89,7 +100,9 @@ export const projects = [
       "Integrated secure vault authentication workflows",
       "Reduced manual operational overhead by 60%"
     ],
-    impact: "Significantly improved operational efficiency and security compliance across the team"
+    impact: "Significantly improved operational efficiency and security compliance across the team",
+    github: null,
+    live: null
   },
   {
     id: 3,
@@ -103,60 +116,57 @@ export const projects = [
       "Designed reserved instance plans for EC2, ElastiCache, and RDS",
       "Right-sized resources based on utilization metrics and autoscaling"
     ],
-    impact: "Achieved 25% reduction in cloud costs while maintaining performance and reliability"
+    impact: "Achieved 25% reduction in cloud costs while maintaining performance and reliability",
+    github: null,
+    live: null
   }
 ];
 
 export const skills = {
   cloud: [
-    "Amazon Web Services (AWS)",
-    "Google Cloud Platform (GCP)",
-    "EC2",
-    "S3",
-    "Lambda",
-    "RDS",
-    "CloudFormation",
-    "CloudWatch",
-    "IAM",
-    "Amazon Bedrock",
-    "ElastiCache",
-    "ELB",
-    "Auto Scaling"
+    { name: "Amazon Web Services (AWS)", icon: "cloud" },
+    { name: "Google Cloud Platform (GCP)", icon: "cloud" },
+    { name: "EC2", icon: "server" },
+    { name: "S3", icon: "database" },
+    { name: "Lambda", icon: "zap" },
+    { name: "RDS", icon: "database" },
+    { name: "CloudFormation", icon: "layers" },
+    { name: "CloudWatch", icon: "activity" },
+    { name: "IAM", icon: "shield" },
+    { name: "Amazon Bedrock", icon: "cpu" },
+    { name: "ElastiCache", icon: "database" },
+    { name: "ELB", icon: "server" },
+    { name: "Auto Scaling", icon: "trending-up" }
   ],
   devops: [
-    "Terraform",
-    "Docker",
-    "Kubernetes",
-    "Jenkins",
-    "GitLab CI/CD",
-    "Git",
-    "GitHub",
-    "Microservices"
+    { name: "Terraform", icon: "box" },
+    { name: "Docker", icon: "package" },
+    { name: "Kubernetes", icon: "hexagon" },
+    { name: "Jenkins", icon: "git-branch" },
+    { name: "GitLab CI/CD", icon: "git-merge" },
+    { name: "Git", icon: "git-branch" },
+    { name: "GitHub", icon: "github" },
+    { name: "Microservices", icon: "grid" }
   ],
   programming: [
-    "Python",
-    "Bash",
-    "YAML",
-    "HTML/CSS",
-    "SQL"
+    { name: "Python", icon: "code" },
+    { name: "Bash", icon: "terminal" },
+    { name: "YAML", icon: "file-text" },
+    { name: "HTML/CSS", icon: "code" },
+    { name: "SQL", icon: "database" }
   ],
   databases: [
-    "MySQL",
-    "MongoDB",
-    "Oracle",
-    "Amazon RDS"
+    { name: "MySQL", icon: "database" },
+    { name: "MongoDB", icon: "database" },
+    { name: "Oracle", icon: "database" },
+    { name: "Amazon RDS", icon: "database" }
   ],
   tools: [
-    "VS Code",
-    "JIRA",
-    "Splunk",
-    "MySQL Workbench",
-    "MongoDB Compass"
-  ],
-  networking: [
-    "TCP/IP",
-    "HTTP/HTTPS",
-    "UDP"
+    { name: "VS Code", icon: "code" },
+    { name: "JIRA", icon: "trello" },
+    { name: "Splunk", icon: "bar-chart" },
+    { name: "MySQL Workbench", icon: "tool" },
+    { name: "MongoDB Compass", icon: "compass" }
   ]
 };
 
@@ -165,37 +175,37 @@ export const certifications = [
     id: 1,
     name: "AWS Certified Solutions Architect - Associate",
     issuer: "Amazon Web Services",
-    icon: "award"
+    date: "2023"
   },
   {
     id: 2,
     name: "AWS Certified Cloud Practitioner",
     issuer: "Amazon Web Services",
-    icon: "award"
+    date: "2023"
   },
   {
     id: 3,
     name: "AWS Certified AI Practitioner",
     issuer: "Amazon Web Services",
-    icon: "award"
+    date: "2024"
   },
   {
     id: 4,
     name: "Google Certified Associate Cloud Engineer",
     issuer: "Google Cloud",
-    icon: "award"
+    date: "2023"
   },
   {
     id: 5,
     name: "Agile Software Development",
     issuer: "Certification Authority",
-    icon: "award"
+    date: "2022"
   },
   {
     id: 6,
     name: "Python Programming",
     issuer: "Coursera",
-    icon: "award"
+    date: "2021"
   }
 ];
 
@@ -207,14 +217,6 @@ export const education = [
     location: "Virginia, USA",
     period: "August 2021 - May 2023",
     description: "Focused on cloud computing, data systems, and software engineering principles."
-  },
-  {
-    id: 2,
-    degree: "Bachelor of Technology",
-    institution: "Previous Institution",
-    location: "India",
-    period: "2016 - 2020",
-    description: "Foundation in computer science and engineering."
   }
 ];
 
@@ -222,43 +224,85 @@ export const photographyGallery = [
   {
     id: 1,
     title: "Mountain Sunset",
-    category: "Landscape",
     image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
     location: "Colorado, USA"
   },
   {
     id: 2,
     title: "City Lights",
-    category: "Urban",
     image: "https://images.unsplash.com/photo-1514565131-fce0801e5785?w=800&q=80",
     location: "New York, USA"
   },
   {
     id: 3,
     title: "Ocean Waves",
-    category: "Seascape",
     image: "https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=800&q=80",
     location: "California Coast"
   },
   {
     id: 4,
     title: "Desert Dunes",
-    category: "Landscape",
     image: "https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=800&q=80",
     location: "Arizona, USA"
   },
   {
     id: 5,
     title: "Forest Path",
-    category: "Nature",
     image: "https://images.unsplash.com/photo-1511497584788-876760111969?w=800&q=80",
     location: "Pacific Northwest"
   },
   {
     id: 6,
     title: "Urban Architecture",
-    category: "Architecture",
     image: "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=800&q=80",
     location: "Chicago, USA"
+  },
+  {
+    id: 7,
+    title: "Northern Lights",
+    image: "https://images.unsplash.com/photo-1483347756197-71ef80e95f73?w=800&q=80",
+    location: "Iceland"
+  },
+  {
+    id: 8,
+    title: "Coastal Sunset",
+    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
+    location: "Maldives"
+  },
+  {
+    id: 9,
+    title: "Mountain Lake",
+    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
+    location: "Switzerland"
+  }
+];
+
+export const blogs = [
+  {
+    id: 1,
+    title: "Optimizing AWS Costs: A Practical Guide",
+    excerpt: "Learn how to reduce your AWS cloud costs by 25% through strategic optimization techniques and best practices.",
+    date: "2024-01-15",
+    readTime: "8 min read",
+    tags: ["AWS", "Cost Optimization", "Cloud"],
+    url: "https://medium.com/@chaitanyachitturi99"
+  },
+  {
+    id: 2,
+    title: "Building Scalable CI/CD Pipelines with GitLab",
+    excerpt: "A comprehensive guide to setting up automated deployment pipelines using GitLab CI/CD and Terraform.",
+    date: "2024-02-10",
+    readTime: "12 min read",
+    tags: ["DevOps", "CI/CD", "GitLab"],
+    url: "https://medium.com/@chaitanyachitturi99"
+  },
+  {
+    id: 3,
+    title: "Introduction to Amazon Bedrock for Developers",
+    excerpt: "Explore how to leverage Amazon Bedrock for building AI-powered applications with practical examples.",
+    date: "2024-03-05",
+    readTime: "10 min read",
+    tags: ["AWS", "AI/ML", "Bedrock"],
+    url: "https://medium.com/@chaitanyachitturi99"
   }
 ];

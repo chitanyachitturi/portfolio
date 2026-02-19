@@ -19,7 +19,7 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <div className="App bg-gradient-to-br from-blue-600 via-cyan-500 to-blue-700 min-h-screen">
       <Header />
       <main>
         <Hero />

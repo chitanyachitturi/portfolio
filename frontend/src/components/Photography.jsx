@@ -30,7 +30,7 @@ const Photography = () => {
           {photographyGallery.map((photo) => (
             <div
               key={photo.id}
-              className="group relative overflow-hidden rounded-2xl border-2 border-gray-100 hover:border-blue-500 transition-all duration-300 cursor-pointer aspect-[4/3] hover:shadow-xl"
+              className="group relative overflow-hidden rounded-2xl border-2 border-white/20 hover:border-white/50 transition-all duration-300 cursor-pointer aspect-[4/3] hover:shadow-xl backdrop-blur-sm"
               onClick={() => setSelectedImage(photo)}
             >
               {/* Image */}

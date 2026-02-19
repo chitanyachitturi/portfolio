@@ -18,34 +18,27 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-600 via-cyan-500 to-blue-700 overflow-hidden">
-      {/* Decorative Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/5 rounded-full blur-3xl"></div>
-      </div>
-
+    <section id="hero" className="relative min-h-screen flex items-center justify-center bg-white dark:bg-gray-900 overflow-hidden">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
         {/* Name with gradient - ONE LINE */}
         <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight">
-          <span className="bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-gray-900 via-blue-600 to-gray-900 dark:from-gray-100 dark:via-blue-400 dark:to-gray-100 bg-clip-text text-transparent">
             Chaitanya Chitturi
           </span>
         </h1>
 
         {/* Title Card with Backdrop Blur - Like Hasan's */}
-        <div className="inline-block mb-8">
-          <div className="relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 shadow-2xl">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent mb-3">
+        <div className="inline-block mb-12">
+          <div className="relative bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-500 rounded-2xl p-6 shadow-xl">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-3">
               Cloud Engineer
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-white to-blue-200 rounded-full mx-auto"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full mx-auto"></div>
           </div>
         </div>
 
         {/* Tagline */}
-        <p className="text-lg sm:text-xl text-white/90 max-w-3xl mx-auto mb-12 leading-relaxed">
+        <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto mb-12 leading-relaxed">
           {personalInfo.tagline}
         </p>
 
@@ -53,7 +46,7 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
           <Button
             size="lg"
-            className="bg-white text-blue-600 hover:bg-blue-50 px-10 py-7 text-lg rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 group font-semibold"
+            className="bg-blue-600 text-white hover:bg-blue-700 px-10 py-7 text-lg rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 group font-semibold"
             onClick={() => scrollToSection('#contact')}
           >
             <Rocket size={20} className="mr-2 group-hover:rotate-12 transition-transform" />
@@ -65,19 +58,19 @@ const Hero = () => {
               href={personalInfo.socialLinks.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-12 h-12 flex items-center justify-center bg-white/10 backdrop-blur-sm border-2 border-white/30 rounded-full hover:bg-white hover:border-white transition-all duration-300 hover:scale-110 group"
+              className="w-12 h-12 flex items-center justify-center bg-white dark:bg-gray-800 border-2 border-gray-400 dark:border-gray-600 rounded-full hover:bg-blue-600 hover:border-blue-600 dark:hover:bg-blue-600 dark:hover:border-blue-600 transition-all duration-300 hover:scale-110 group shadow-md"
               aria-label="GitHub"
             >
-              <Github size={20} className="text-white group-hover:text-blue-600" />
+              <Github size={20} className="text-gray-800 dark:text-gray-200 group-hover:text-white" />
             </a>
             <a
               href={personalInfo.socialLinks.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-12 h-12 flex items-center justify-center bg-white/10 backdrop-blur-sm border-2 border-white/30 rounded-full hover:bg-white hover:border-white transition-all duration-300 hover:scale-110 group"
+              className="w-12 h-12 flex items-center justify-center bg-white dark:bg-gray-800 border-2 border-gray-400 dark:border-gray-600 rounded-full hover:bg-blue-600 hover:border-blue-600 dark:hover:bg-blue-600 dark:hover:border-blue-600 transition-all duration-300 hover:scale-110 group shadow-md"
               aria-label="LinkedIn"
             >
-              <Linkedin size={20} className="text-white group-hover:text-blue-600" />
+              <Linkedin size={20} className="text-gray-800 dark:text-gray-200 group-hover:text-white" />
             </a>
           </div>
         </div>
@@ -85,7 +78,7 @@ const Hero = () => {
         {/* Scroll Indicator */}
         <button
           onClick={() => scrollToSection('#about')}
-          className="inline-flex flex-col items-center text-white/70 hover:text-white transition-colors animate-bounce"
+          className="inline-flex flex-col items-center text-gray-600 hover:text-blue-600 transition-colors animate-bounce"
           aria-label="Scroll to about section"
         >
           <span className="text-sm font-medium mb-2">Scroll to explore</span>

@@ -9,15 +9,15 @@ const Skills = () => {
   const displayedSkills = showAll ? skillsWithLogos : skillsWithLogos.slice(0, 12);
 
   return (
-    <section id="skills" className="py-32">
+    <section id="skills" className="py-32 bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Technical Skills
           </h2>
-          <div className="w-20 h-1 bg-white/50 mx-auto mb-6"></div>
-          <p className="text-lg text-white/90 max-w-3xl mx-auto">
+          <div className="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             A curated selection of my expertise in Cloud Computing and DevOps
           </p>
         </div>
@@ -27,13 +27,15 @@ const Skills = () => {
           {displayedSkills.map((skill, index) => (
             <Card
               key={index}
-              className="group p-6 flex flex-col items-center justify-center gap-4 bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 cursor-pointer"
+              className="group p-6 flex flex-col items-center justify-center gap-4 bg-white-50 border-gray-200 hover:bg-white hover:border-blue-300 hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer"
             >
               <div className="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
                 <img
                   src={skill.logo}
                   alt={skill.name}
-                  className="w-full h-full object-contain transition-all duration-300 group-hover:scale-110"
+                  className={`w-full h-full object-contain transition-all duration-300 group-hover:scale-110 ${
+                    skill.name === 'GitLab' ? 'scale-125' : ''
+                  }`}
                   onError={(e) => {
                     e.target.style.display = 'none';
                     e.target.nextSibling.style.display = 'flex';
@@ -43,7 +45,7 @@ const Skills = () => {
                   {skill.name.charAt(0)}
                 </div>
               </div>
-              <span className="text-sm font-medium text-white group-hover:text-white/90 transition-colors text-center">
+              <span className="text-sm font-medium text-gray-700 group-hover:text-blue-600 transition-colors text-center">
                 {skill.name}
               </span>
             </Card>
@@ -55,7 +57,7 @@ const Skills = () => {
           <div className="text-center">
             <Button
               onClick={() => setShowAll(!showAll)}
-              className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white border border-white/30 px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all"
+              className="bg-blue-600 hover:bg-blue-700 text-white border-0 px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all"
             >
               {showAll ? (
                 <>
@@ -73,7 +75,7 @@ const Skills = () => {
         )}
 
         {/* Additional Info */}
-        <p className="text-center text-white/70 mt-8 italic">
+        <p className="text-center text-gray-500 mt-8 italic">
           ...and plenty more technologies I'm exploring & mastering every day.
         </p>
       </div>

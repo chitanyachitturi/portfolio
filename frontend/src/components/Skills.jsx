@@ -22,7 +22,7 @@ const Skills = () => {
           </p>
         </div>
 
-        {/* Skills Grid - Like Hasan's Portfolio */}
+        {/* Skills Grid - Like Hasan's Portfolio with COLOR by default */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 mb-8">
           {displayedSkills.map((skill, index) => (
             <Card
@@ -33,7 +33,7 @@ const Skills = () => {
                 <img
                   src={skill.logo}
                   alt={skill.name}
-                  className="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+                  className="w-full h-full object-contain transition-all duration-300 group-hover:scale-110"
                   onError={(e) => {
                     e.target.style.display = 'none';
                     e.target.nextSibling.style.display = 'flex';

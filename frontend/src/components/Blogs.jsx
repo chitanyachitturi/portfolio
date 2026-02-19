@@ -1,26 +1,27 @@
 import React from 'react';
-import { Calendar, Clock, ExternalLink, ArrowRight } from 'lucide-react';
+import { Calendar, Clock, ArrowRight } from 'lucide-react';
 import { Card } from './ui/card';
 import { Badge } from './ui/badge';
 import { Button } from './ui/button';
 import { blogs, personalInfo } from '../data/mock';
+import { BookOpen } from 'lucide-react';
 
 const Blogs = () => {
   return (
-    <section id="blogs" className="py-20 md:py-32 bg-black relative">
-      {/* Decorative Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-orange-500/5 rounded-full blur-3xl"></div>
-      </div>
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="blogs" className="py-32 bg-gradient-to-br from-blue-50 via-white to-cyan-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center justify-center gap-2 mb-4">
+            <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center">
+              <BookOpen size={24} className="text-white" />
+            </div>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Recent Blogs
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-orange-500 to-orange-600 mx-auto mb-6"></div>
-          <p className="text-lg text-gray-400 max-w-3xl mx-auto">
+          <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-cyan-600 mx-auto mb-6"></div>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Insights, tutorials, and thoughts on cloud engineering and DevOps practices
           </p>
         </div>
@@ -30,7 +31,7 @@ const Blogs = () => {
           {blogs.map((blog) => (
             <Card
               key={blog.id}
-              className="group p-6 bg-gradient-to-br from-gray-900 to-black border-orange-500/20 hover:border-orange-500/50 hover:shadow-xl hover:shadow-orange-500/20 transition-all duration-300 flex flex-col"
+              className="group p-6 bg-white border-2 border-gray-100 hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col hover:-translate-y-2"
             >
               {/* Date and Read Time */}
               <div className="flex items-center gap-4 mb-4 text-sm text-gray-500">
@@ -45,12 +46,12 @@ const Blogs = () => {
               </div>
 
               {/* Title */}
-              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-orange-500 transition-colors leading-tight">
+              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors leading-tight">
                 {blog.title}
               </h3>
 
               {/* Excerpt */}
-              <p className="text-gray-400 mb-4 flex-grow leading-relaxed">
+              <p className="text-gray-600 mb-4 flex-grow leading-relaxed">
                 {blog.excerpt}
               </p>
 
@@ -59,7 +60,7 @@ const Blogs = () => {
                 {blog.tags.map((tag, index) => (
                   <Badge
                     key={index}
-                    className="bg-orange-500/10 text-orange-500 border border-orange-500/30 hover:bg-orange-500/20 text-xs"
+                    className="bg-blue-100 text-blue-700 hover:bg-blue-200 border-0 text-xs font-semibold"
                   >
                     {tag}
                   </Badge>
@@ -71,7 +72,7 @@ const Blogs = () => {
                 href={blog.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-orange-500 hover:text-orange-400 transition-colors font-medium text-sm"
+                className="flex items-center gap-2 text-blue-600 hover:text-blue-700 transition-colors font-medium text-sm"
               >
                 Read More
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
@@ -83,10 +84,10 @@ const Blogs = () => {
         {/* View All Button */}
         <div className="text-center">
           <Button
-            className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-6 text-lg rounded-full transition-all duration-300 shadow-lg shadow-orange-500/50 hover:shadow-orange-500/70"
+            className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-6 text-lg rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
             onClick={() => window.open(personalInfo.socialLinks.medium, '_blank')}
           >
-            <ExternalLink size={20} className="mr-2" />
+            <BookOpen size={20} className="mr-2" />
             Read All Blogs on Medium
           </Button>
         </div>

@@ -47,19 +47,12 @@ const Header = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          {/* Logo with Profile Picture */}
+          {/* Logo WITHOUT Profile Picture */}
           <a
             href="#hero"
             onClick={(e) => scrollToSection(e, '#hero')}
             className="flex items-center gap-3 group"
           >
-            <div className="w-12 h-12 rounded-full overflow-hidden ring-2 ring-blue-100 group-hover:ring-blue-500 transition-all">
-              <img
-                src={personalInfo.photo}
-                alt={personalInfo.name}
-                className="w-full h-full object-cover"
-              />
-            </div>
             <span className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
               {personalInfo.firstName} <span className="text-blue-600">{personalInfo.lastName}</span>
             </span>

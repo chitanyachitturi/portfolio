@@ -237,16 +237,8 @@ code {
     animation: wiggle 0.5s ease-in-out;
 }
 
-/* Hide default cursor when custom cursor is active */
-@media (pointer: fine) {
-    body {
-        cursor: none !important;
-    }
-    
-    a, button, [data-hover="true"] {
-        cursor: none !important;
-    }
-}
+/* Hide default cursor when custom cursor is active - DISABLED */
+/* Custom cursor removed per user request */
 
 /* Easter egg hover hint on name */
 .easter-egg-trigger {

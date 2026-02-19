@@ -12,7 +12,6 @@ import Photography from './components/Photography';
 import Blogs from './components/Blogs';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import CustomCursor from './components/CustomCursor';
 import TicTacToe from './components/TicTacToe';
 
 function App() {
@@ -33,7 +32,6 @@ function App() {
   return (
     <ThemeProvider>
       <div className="App bg-white dark:bg-gray-900 min-h-screen transition-colors duration-300">
-        <CustomCursor />
         <Header />
         <main>
           <Hero />

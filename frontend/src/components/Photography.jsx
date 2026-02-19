@@ -7,20 +7,20 @@ const Photography = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
   return (
-    <section id="photography" className="py-32 bg-white">
+    <section id="photography" className="py-32 bg-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-20">
           <div className="inline-flex items-center justify-center gap-2 mb-4">
-            <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center">
+            <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30">
               <Camera size={24} className="text-white" />
             </div>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Photography & Travel
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-cyan-600 mx-auto mb-6"></div>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <div className="w-20 h-1 bg-white/50 mx-auto mb-6"></div>
+          <p className="text-lg text-white/80 max-w-3xl mx-auto">
             Capturing moments from my travels and exploring the world through the lens
           </p>
         </div>

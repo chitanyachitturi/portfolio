@@ -8,6 +8,7 @@ import Projects from './components/Projects';
 import Skills from './components/Skills';
 import CertificationsEducation from './components/CertificationsEducation';
 import Photography from './components/Photography';
+import Blogs from './components/Blogs';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -18,7 +19,7 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <div className="App bg-black">
       <Header />
       <main>
         <Hero />
@@ -28,6 +29,7 @@ function App() {
         <Skills />
         <CertificationsEducation />
         <Photography />
+        <Blogs />
         <Contact />
       </main>
       <Footer />

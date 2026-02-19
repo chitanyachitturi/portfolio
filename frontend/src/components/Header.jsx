@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, User, Briefcase, FolderGit2, Code, Camera, BookOpen, Mail, Moon, Sun } from 'lucide-react';
+import { Menu, X, User, Building2, FolderGit2, Code, Camera, BookOpen, Mail, Moon, Sun } from 'lucide-react';
 import { personalInfo } from '../data/mock';
 import { useTheme } from '../context/ThemeContext';
 
@@ -18,7 +18,7 @@ const Header = () => {
 
   const navItems = [
     { name: 'About', href: '#about', icon: User },
-    { name: 'Experience', href: '#experience', icon: Briefcase },
+    { name: 'Experience', href: '#experience', icon: Building2 },
     { name: 'Projects', href: '#projects', icon: FolderGit2 },
     { name: 'Skills', href: '#skills', icon: Code },
     { name: 'Blogs', href: '#blogs', icon: BookOpen },

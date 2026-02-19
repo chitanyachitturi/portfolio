@@ -6,9 +6,9 @@ export const personalInfo = {
   location: "Blacksburg, VA",
   email: "chaitanyachitturi99@gmail.com",
   phone: "(703)-862-0600",
-  photo: "https://customer-assets.emergentagent.com/job_baa3294c-70d0-455b-b5b8-da272f44bf4d/artifacts/omrq2kw4_IMG_7447.jpg",
+  photo: "https://customer-assets.emergentagent.com/job_tech-and-travel/artifacts/uobcihah_IMG_7447.png",
   bio: "Passionate Cloud Engineer specializing in AWS infrastructure optimization, DevOps automation, and scalable cloud solutions. With a strong foundation in infrastructure as code and CI/CD pipelines, I help organizations build reliable, secure, and cost-effective cloud environments.",
-  tagline: "Building scalable infrastructure and optimizing cloud operations",
+  tagline: "Building scalable infrastructure aligned with business requirements",
   socialLinks: {
     linkedin: "https://www.linkedin.com/in/chaitanya-chitturi/",
     medium: "https://medium.com/@chaitanyachitturi99",
@@ -122,53 +122,21 @@ export const projects = [
   }
 ];
 
-export const skills = {
-  cloud: [
-    { name: "Amazon Web Services (AWS)", icon: "cloud" },
-    { name: "Google Cloud Platform (GCP)", icon: "cloud" },
-    { name: "EC2", icon: "server" },
-    { name: "S3", icon: "database" },
-    { name: "Lambda", icon: "zap" },
-    { name: "RDS", icon: "database" },
-    { name: "CloudFormation", icon: "layers" },
-    { name: "CloudWatch", icon: "activity" },
-    { name: "IAM", icon: "shield" },
-    { name: "Amazon Bedrock", icon: "cpu" },
-    { name: "ElastiCache", icon: "database" },
-    { name: "ELB", icon: "server" },
-    { name: "Auto Scaling", icon: "trending-up" }
-  ],
-  devops: [
-    { name: "Terraform", icon: "box" },
-    { name: "Docker", icon: "package" },
-    { name: "Kubernetes", icon: "hexagon" },
-    { name: "Jenkins", icon: "git-branch" },
-    { name: "GitLab CI/CD", icon: "git-merge" },
-    { name: "Git", icon: "git-branch" },
-    { name: "GitHub", icon: "github" },
-    { name: "Microservices", icon: "grid" }
-  ],
-  programming: [
-    { name: "Python", icon: "code" },
-    { name: "Bash", icon: "terminal" },
-    { name: "YAML", icon: "file-text" },
-    { name: "HTML/CSS", icon: "code" },
-    { name: "SQL", icon: "database" }
-  ],
-  databases: [
-    { name: "MySQL", icon: "database" },
-    { name: "MongoDB", icon: "database" },
-    { name: "Oracle", icon: "database" },
-    { name: "Amazon RDS", icon: "database" }
-  ],
-  tools: [
-    { name: "VS Code", icon: "code" },
-    { name: "JIRA", icon: "trello" },
-    { name: "Splunk", icon: "bar-chart" },
-    { name: "MySQL Workbench", icon: "tool" },
-    { name: "MongoDB Compass", icon: "compass" }
-  ]
-};
+// Skills with logo URLs (using SVG logos from various CDNs)
+export const skillsWithLogos = [
+  { name: "AWS", logo: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" },
+  { name: "Python", logo: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" },
+  { name: "Terraform", logo: "https://www.vectorlogo.zone/logos/terraformio/terraformio-icon.svg" },
+  { name: "Docker", logo: "https://www.vectorlogo.zone/logos/docker/docker-icon.svg" },
+  { name: "Kubernetes", logo: "https://www.vectorlogo.zone/logos/kubernetes/kubernetes-icon.svg" },
+  { name: "Jenkins", logo: "https://www.vectorlogo.zone/logos/jenkins/jenkins-icon.svg" },
+  { name: "GitLab", logo: "https://about.gitlab.com/images/press/logo/svg/gitlab-logo-gray-rgb.svg" },
+  { name: "GitHub Actions", logo: "https://www.vectorlogo.zone/logos/github/github-icon.svg" },
+  { name: "Ansible", logo: "https://www.vectorlogo.zone/logos/ansible/ansible-icon.svg" },
+  { name: "MySQL", logo: "https://www.vectorlogo.zone/logos/mysql/mysql-icon.svg" },
+  { name: "MongoDB", logo: "https://www.vectorlogo.zone/logos/mongodb/mongodb-icon.svg" },
+  { name: "Git", logo: "https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" }
+];
 
 export const certifications = [
   {

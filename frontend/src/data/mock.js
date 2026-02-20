@@ -9,7 +9,7 @@ export const personalInfo = {
   photo: "https://customer-assets.emergentagent.com/job_tech-and-travel/artifacts/uobcihah_IMG_7447.png",
   bio: "Passionate Cloud Engineer specializing in AWS infrastructure optimization, DevOps automation, and scalable cloud solutions. With a strong foundation in infrastructure as code and CI/CD pipelines, I help organizations build reliable, secure, and cost-effective cloud environments.",
   tagline: "Building scalable infrastructure aligned with business requirements",
-  resumeUrl: "/resume.pdf",
+  resumeUrl: "/assets/resume.pdf",
   socialLinks: {
     linkedin: "https://www.linkedin.com/in/chaitanya-chitturi/",
     medium: "https://medium.com/@chaitanyachitturi99",

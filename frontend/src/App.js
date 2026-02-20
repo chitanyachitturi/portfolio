@@ -13,6 +13,7 @@ import Blogs from './components/Blogs';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import TicTacToe from './components/TicTacToe';
+import InteractiveParticles from './components/InteractiveParticles';
 
 function App() {
   const [showGame, setShowGame] = useState(false);
@@ -31,20 +32,23 @@ function App() {
 
   return (
     <ThemeProvider>
-      <div className="App bg-white dark:bg-gray-900 min-h-screen transition-colors duration-300">
-        <Header />
-        <main>
-          <Hero />
-          <About />
-          <Experience />
-          <Projects />
-          <Skills />
-          <CertificationsEducation />
-          <Photography />
-          <Blogs />
-          <Contact />
-        </main>
-        <Footer />
+      <div className="App bg-white dark:bg-gray-900 min-h-screen transition-colors duration-300 relative">
+        <InteractiveParticles />
+        <div className="relative z-10">
+          <Header />
+          <main>
+            <Hero />
+            <About />
+            <Experience />
+            <Projects />
+            <Skills />
+            <CertificationsEducation />
+            <Photography />
+            <Blogs />
+            <Contact />
+          </main>
+          <Footer />
+        </div>
         {showGame && <TicTacToe onClose={() => setShowGame(false)} />}
       </div>
     </ThemeProvider>

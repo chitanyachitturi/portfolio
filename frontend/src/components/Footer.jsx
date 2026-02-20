@@ -33,7 +33,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gray-100 dark:bg-gray-950 border-t-2 border-gray-200 dark:border-gray-800 py-12 relative">
+    <footer className="bg-gray-100 dark:bg-gray-950 border-t-2 border-gray-200 dark:border-gray-800 py-12 relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* About Column */}

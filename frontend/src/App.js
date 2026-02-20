@@ -14,7 +14,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import TicTacToe from './components/TicTacToe';
 import CustomCursor from './components/CustomCursor';
-// import InteractiveParticles from './components/InteractiveParticles';
+import InteractiveParticles from './components/InteractiveParticles';
 
 function App() {
   const [showGame, setShowGame] = useState(false);
@@ -35,8 +35,8 @@ function App() {
     <ThemeProvider>
       <div className="App bg-white dark:bg-gray-900 min-h-screen transition-colors duration-300 relative">
         <CustomCursor />
-        {/* <InteractiveParticles /> */}
-        <div className="relative z-10">
+        <InteractiveParticles />
+        <div className="relative">
           <Header />
           <main>
             <Hero />

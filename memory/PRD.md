@@ -106,4 +106,4 @@ Build a modern, responsive portfolio website for a Cloud Engineer. The site shou
 https://github.com/chitanyachitturi/portfolio
 
 ## Preview URL
-https://creative-coder-58.preview.emergentagent.com
+https://particle-depth.preview.emergentagent.com

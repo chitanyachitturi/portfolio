@@ -191,57 +191,69 @@ export const education = [
 export const photographyGallery = [
   {
     id: 1,
-    title: "Mountain Sunset",
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
-    location: "Colorado, USA"
+    title: "Alexandria Waterfront",
+    image: "/images/Alexandria Water Front Building.jpg",
+    location: "Alexandria, VA"
   },
   {
     id: 2,
-    title: "City Lights",
-    image: "https://images.unsplash.com/photo-1514565131-fce0801e5785?w=800&q=80",
-    location: "New York, USA"
+    title: "American Robin",
+    image: "/images/American Robin.jpg",
+    location: "Virginia"
   },
   {
     id: 3,
-    title: "Ocean Waves",
-    image: "https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=800&q=80",
-    location: "California Coast"
+    title: "Blue Heron",
+    image: "/images/Blue Heron.jpg",
+    location: "Virginia"
   },
   {
     id: 4,
-    title: "Desert Dunes",
-    image: "https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=800&q=80",
-    location: "Arizona, USA"
+    title: "Downy Woodpecker",
+    image: "/images/Downy Woodpecker.jpg",
+    location: "Virginia"
   },
   {
     id: 5,
-    title: "Forest Path",
-    image: "https://images.unsplash.com/photo-1511497584788-876760111969?w=800&q=80",
-    location: "Pacific Northwest"
+    title: "Duck",
+    image: "/images/Duck.jpg",
+    location: "Virginia"
   },
   {
     id: 6,
-    title: "Urban Architecture",
-    image: "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=800&q=80",
-    location: "Chicago, USA"
+    title: "Space Suite",
+    image: "/images/space suite.jpg",
+    location: "Virginia"
   },
   {
     id: 7,
-    title: "Northern Lights",
-    image: "https://images.unsplash.com/photo-1483347756197-71ef80e95f73?w=800&q=80",
-    location: "Iceland"
+    title: "Full Moon",
+    image: "/images/Full Moon.jpg",
+    location: "Virginia"
+  },
+  {
+    id: 7,
+    title: "GMU Clock Tower",
+    image: "/images/GMU Clock.jpg",
+    location: "George Mason University, VA"
   },
   {
     id: 8,
-    title: "Coastal Sunset",
-    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
-    location: "Maldives"
+    title: "Southwest Landscape",
+    image: "/images/Southwest_Low_Whites.jpg",
+    location: "Southwest USA"
   },
   {
     id: 9,
-    title: "Mountain Lake",
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
-    location: "Switzerland"
+    title: "Cascades",
+    image: "/images/cascades.jpg",
+    location: "Virginia"
+  },
+  {
+    id: 10,
+    title: "White-throated Sparrow",
+    image: "/images/white-throated sparrow.jpg",
+    location: "Virginia"
   }
 ];
 

@@ -29,7 +29,7 @@ const About = () => {
           <ScrollReveal direction="left" delay={100}>
             <div className="flex justify-center lg:justify-end">
               <div className="relative group">
-                <div className="w-80 h-80 rounded-3xl overflow-hidden shadow-2xl transition-transform duration-500 group-hover:scale-105">
+                <div className="w-96 h-96 rounded-3xl overflow-hidden shadow-2xl transition-transform duration-500 group-hover:scale-105">
                   <img
                     src={personalInfo.photo}
                     alt={personalInfo.name}
@@ -37,7 +37,7 @@ const About = () => {
                   />
                 </div>
                 {/* Decorative elements */}
-                <div className="absolute -bottom-4 -right-4 w-80 h-80 border-2 border-blue-500/30 rounded-3xl -z-10 transition-transform duration-500 group-hover:translate-x-2 group-hover:translate-y-2"></div>
+                <div className="absolute -bottom-4 -right-4 w-96 h-96 border-2 border-blue-500/30 rounded-3xl -z-10 transition-transform duration-500 group-hover:translate-x-2 group-hover:translate-y-2"></div>
               </div>
             </div>
           </ScrollReveal>

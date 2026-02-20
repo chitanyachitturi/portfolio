@@ -19,7 +19,7 @@ const Photography = () => {
               </div>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-              My Non-Cloud Storage
+              Life beyond the terminal
             </h2>
             <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-cyan-600 mx-auto mb-6"></div>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
@@ -29,18 +29,18 @@ const Photography = () => {
         </ScrollReveal>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
           {photographyGallery.map((photo, index) => (
             <ScrollReveal key={photo.id} delay={index * 100} direction="up">
               <div
-                className="group relative overflow-hidden rounded-2xl border-2 border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300 cursor-pointer aspect-[4/3] hover:shadow-xl"
+                className="group relative overflow-hidden rounded-2xl border-2 border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300 cursor-pointer hover:shadow-xl bg-white dark:bg-gray-800 break-inside-avoid mb-6"
                 onClick={() => setSelectedImage(photo)}
               >
                 {/* Image */}
                 <img
                   src={photo.image}
                   alt={photo.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500"
                 />
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">

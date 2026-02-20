@@ -9,6 +9,7 @@ export const personalInfo = {
   photo: "https://customer-assets.emergentagent.com/job_tech-and-travel/artifacts/uobcihah_IMG_7447.png",
   bio: "Passionate Cloud Engineer specializing in AWS infrastructure optimization, DevOps automation, and scalable cloud solutions. With a strong foundation in infrastructure as code and CI/CD pipelines, I help organizations build reliable, secure, and cost-effective cloud environments.",
   tagline: "Building scalable infrastructure aligned with business requirements",
+  resumeUrl: "/resume.pdf",
   socialLinks: {
     linkedin: "https://www.linkedin.com/in/chaitanya-chitturi/",
     medium: "https://medium.com/@chaitanyachitturi99",
@@ -143,19 +144,22 @@ export const certifications = [
     id: 1,
     name: "AWS Certified Solutions Architect - Associate",
     issuer: "Amazon Web Services",
-    date: "2023"
+    date: "2023",
+    badge: "https://www.credly.com/badges/0a815f0d-722e-4a61-b090-aa019d9c3988/public_url"
   },
   {
     id: 2,
     name: "AWS Certified Cloud Practitioner",
     issuer: "Amazon Web Services",
-    date: "2023"
+    date: "2023",
+    badge: "https://www.credly.com/badges/a14253e8-247e-4901-8039-9c35e4a415a1/public_url"
   },
   {
     id: 3,
     name: "AWS Certified AI Practitioner",
     issuer: "Amazon Web Services",
-    date: "2024"
+    date: "2024",
+    badge: "https://www.credly.com/badges/5e4cf173-143c-48fb-a163-3e020b4c6cf1/public_url"
   },
   {
     id: 4,
@@ -165,15 +169,15 @@ export const certifications = [
   },
   {
     id: 5,
-    name: "Agile Software Development",
-    issuer: "Certification Authority",
-    date: "2022"
+    name: "Lead 4 Success Leadership Training",
+    issuer: "Centre for Creative Leadership at Eckerd College",
+    date: null
   },
   {
     id: 6,
-    name: "Python Programming",
-    issuer: "Coursera",
-    date: "2021"
+    name: "Virtualization Workshop",
+    issuer: "VMWare",
+    date: null
   }
 ];
 

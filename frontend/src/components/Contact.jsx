@@ -6,6 +6,7 @@ import { personalInfo } from '../data/mock';
 import { FileText } from 'lucide-react';
 import ScrollReveal from './ScrollReveal';
 import MagneticButton from './MagneticButton';
+import SectionHeader from './SectionHeader';
 
 const Contact = () => {
   const contactMethods = [
@@ -30,19 +31,14 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-32 relative bg-white dark:bg-gray-900">
+    <section id="contact" className="py-16 relative bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <ScrollReveal>
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-              Get In Touch
-            </h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-cyan-600 mx-auto mb-6"></div>
-            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              I'm always open to discussing new opportunities, collaborations, or just having a chat about cloud engineering
-            </p>
-          </div>
+          <SectionHeader 
+            title="Get In Touch" 
+            subtitle="I'm always open to discussing new opportunities, collaborations, or just having a chat about cloud engineering"
+          />
         </ScrollReveal>
 
         <div className="max-w-4xl mx-auto">

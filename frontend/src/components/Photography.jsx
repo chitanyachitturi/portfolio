@@ -3,29 +3,20 @@ import { Camera, X } from 'lucide-react';
 import { Dialog, DialogContent } from './ui/dialog';
 import { photographyGallery } from '../data/mock';
 import ScrollReveal from './ScrollReveal';
+import SectionHeader from './SectionHeader';
 
 const Photography = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
   return (
-    <section id="photography" className="py-32 relative bg-white dark:bg-gray-900">
+    <section id="photography" className="py-16 relative bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <ScrollReveal>
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center justify-center gap-2 mb-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center">
-                <Camera size={24} className="text-white" />
-              </div>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-              Life beyond the terminal
-            </h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-cyan-600 mx-auto mb-6"></div>
-            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Capturing moments from my travels and exploring the world through the lens
-            </p>
-          </div>
+          <SectionHeader 
+            title="Life beyond the terminal" 
+            subtitle="Capturing moments from my travels and exploring the world through the lens"
+          />
         </ScrollReveal>
 
         {/* Gallery Grid */}

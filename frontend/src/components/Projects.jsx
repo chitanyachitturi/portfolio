@@ -4,6 +4,7 @@ import { Card } from './ui/card';
 import { Badge } from './ui/badge';
 import { projects } from '../data/mock';
 import ScrollReveal from './ScrollReveal';
+import SectionHeader from './SectionHeader';
 
 const Projects = () => {
   const projectIcons = {
@@ -13,19 +14,14 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="py-32 relative bg-white dark:bg-gray-900">
+    <section id="projects" className="py-16 relative bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <ScrollReveal>
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-              Featured Projects
-            </h2>
-            <div className="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
-            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-              Key initiatives showcasing cloud engineering expertise and innovative solutions
-            </p>
-          </div>
+          <SectionHeader 
+            title="Featured Projects" 
+            subtitle="Key initiatives showcasing cloud engineering expertise and innovative solutions"
+          />
         </ScrollReveal>
 
         {/* Projects Grid */}

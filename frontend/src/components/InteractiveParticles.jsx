@@ -4,6 +4,7 @@ const InteractiveParticles = () => {
   const canvasRef = useRef(null);
   const mouseRef = useRef({ x: null, y: null });
   const particlesRef = useRef([]);
+  const isDarkRef = useRef(false);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -12,6 +13,16 @@ const InteractiveParticles = () => {
     console.log('InteractiveParticles: Canvas initialized');
     const ctx = canvas.getContext('2d');
     let animationFrameId;
+
+    // Check dark mode
+    const checkDarkMode = () => {
+      isDarkRef.current = document.documentElement.classList.contains('dark');
+    };
+    checkDarkMode();
+
+    // Watch for theme changes
+    const observer = new MutationObserver(checkDarkMode);
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
 
     // Set canvas size
     const setCanvasSize = () => {
@@ -67,7 +78,7 @@ const InteractiveParticles = () => {
       draw() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(59, 130, 246, 0.8)';
+        ctx.fillStyle = isDarkRef.current ? 'rgba(147, 197, 253, 0.6)' : 'rgba(59, 130, 246, 0.8)';
         ctx.fill();
       }
     }
@@ -93,7 +104,9 @@ const InteractiveParticles = () => {
 
           if (distance < 120) {
             ctx.beginPath();
-            ctx.strokeStyle = `rgba(59, 130, 246, ${0.3 * (1 - distance / 120)})`;
+            ctx.strokeStyle = isDarkRef.current 
+              ? `rgba(147, 197, 253, ${0.4 * (1 - distance / 120)})` 
+              : `rgba(59, 130, 246, ${0.3 * (1 - distance / 120)})`;
             ctx.lineWidth = 1.5;
             ctx.moveTo(particlesRef.current[i].x, particlesRef.current[i].y);
             ctx.lineTo(particlesRef.current[j].x, particlesRef.current[j].y);
@@ -136,6 +149,7 @@ const InteractiveParticles = () => {
 
     // Cleanup
     return () => {
+      observer.disconnect();
       window.removeEventListener('resize', setCanvasSize);
       window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('mouseleave', handleMouseLeave);

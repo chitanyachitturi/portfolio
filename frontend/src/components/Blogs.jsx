@@ -7,27 +7,18 @@ import { blogs, personalInfo } from '../data/mock';
 import { BookOpen } from 'lucide-react';
 import ScrollReveal from './ScrollReveal';
 import MagneticButton from './MagneticButton';
+import SectionHeader from './SectionHeader';
 
 const Blogs = () => {
   return (
-    <section id="blogs" className="py-32 relative bg-white dark:bg-gray-900">
+    <section id="blogs" className="py-16 relative bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <ScrollReveal>
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center justify-center gap-2 mb-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center">
-                <BookOpen size={24} className="text-white" />
-              </div>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-              Recent Blogs
-            </h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-cyan-600 mx-auto mb-6"></div>
-            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Insights, tutorials, and thoughts on cloud engineering and DevOps practices
-            </p>
-          </div>
+          <SectionHeader 
+            title="Recent Blogs" 
+            subtitle="Insights, tutorials, and thoughts on cloud engineering and DevOps practices"
+          />
         </ScrollReveal>
 
         {/* Blogs Grid */}

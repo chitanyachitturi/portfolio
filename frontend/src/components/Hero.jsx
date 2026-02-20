@@ -1,5 +1,5 @@
 import React, { useRef, useCallback } from 'react';
-import { ArrowDown, Linkedin, Github, Rocket } from 'lucide-react';
+import { ArrowDown, Linkedin, Github, Rocket, FileText } from 'lucide-react';
 import { Button } from './ui/button';
 import { personalInfo } from '../data/mock';
 import MagneticButton from './MagneticButton';
@@ -83,6 +83,17 @@ const Hero = () => {
             >
               <Rocket size={20} className="mr-2 group-hover:rotate-12 transition-transform" />
               Let's Connect
+            </Button>
+          </MagneticButton>
+
+          <MagneticButton strength={0.2}>
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-10 py-7 text-lg rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 group font-semibold"
+              onClick={() => window.open(personalInfo.resumeUrl, '_blank')}
+            >
+              <FileText size={20} className="mr-2" />
+              View Resume
             </Button>
           </MagneticButton>
 

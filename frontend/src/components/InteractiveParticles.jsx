@@ -147,7 +147,7 @@ const InteractiveParticles = () => {
     <canvas
       ref={canvasRef}
       className="fixed inset-0 w-full h-full pointer-events-none"
-      style={{ zIndex:100, backgroundColor: 'rgba(0,0,0,0.05)' }}
+      style={{ zIndex: 0 }}
     />
   );
 };

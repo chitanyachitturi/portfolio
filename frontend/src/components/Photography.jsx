@@ -33,7 +33,7 @@ const Photography = () => {
           {photographyGallery.map((photo, index) => (
             <ScrollReveal key={photo.id} delay={index * 100} direction="up">
               <div
-                className="group relative overflow-hidden rounded-2xl border-2 border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300 cursor-pointer hover:shadow-xl bg-white dark:bg-gray-800 break-inside-avoid mb-6"
+                className="group relative overflow-hidden rounded-2xl border-2 border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300 cursor-pointer hover:shadow-xl bg-white dark:bg-gray-800 break-inside-avoid mb-6 z-10"
                 onClick={() => setSelectedImage(photo)}
               >
                 {/* Image */}

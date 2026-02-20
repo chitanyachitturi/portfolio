@@ -33,7 +33,7 @@ function App() {
 
   return (
     <ThemeProvider>
-      <div className="App min-h-screen transition-colors duration-300 relative bg-white dark:bg-gray-900">
+      <div className="App min-h-screen transition-colors duration-300 relative">
         <CustomCursor />
         <InteractiveParticles />
         <div className="relative">

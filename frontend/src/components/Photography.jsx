@@ -8,7 +8,7 @@ const Photography = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
   return (
-    <section id="photography" className="py-32 bg-white dark:bg-gray-900 relative z-10">
+    <section id="photography" className="py-32 bg-white dark:bg-gray-900 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <ScrollReveal>

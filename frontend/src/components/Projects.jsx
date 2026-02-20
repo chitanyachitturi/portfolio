@@ -13,7 +13,7 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="py-32 bg-white dark:bg-gray-900 relative">
+    <section id="projects" className="py-32 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <ScrollReveal>

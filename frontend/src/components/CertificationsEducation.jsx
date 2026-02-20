@@ -6,7 +6,7 @@ import ScrollReveal from './ScrollReveal';
 
 const CertificationsEducation = () => {
   return (
-    <section id="certifications" className="py-32 bg-white dark:bg-gray-900 relative">
+    <section id="certifications" className="py-32 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Certifications Section */}
         <div className="mb-32">

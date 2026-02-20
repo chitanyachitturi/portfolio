@@ -43,7 +43,7 @@ const About = () => {
               </div>
               
               {/* Floating stats cards */}
-              <div className="absolute -right-4 top-8 space-y-4">
+              <div className="absolute -right-4 top-8 space-y-6">
                 {stats.slice(0, 2).map((stat, index) => {
                   const Icon = stat.icon;
                   return (

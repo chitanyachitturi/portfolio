@@ -42,7 +42,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white dark:bg-gray-900">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
         {/* Name with gradient - ONE LINE - EASTER EGG TRIGGER */}
         <h1 

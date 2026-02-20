@@ -36,7 +36,7 @@ function App() {
       <div className="App min-h-screen transition-colors duration-300 relative">
         <CustomCursor />
         <InteractiveParticles />
-        <div className="relative z-[1] bg-white dark:bg-gray-900">
+        <div className="relative z-[1]">
           <Header />
           <main>
             <Hero />
